@@ -1,0 +1,58 @@
+http://redisdoc.com    redis学习地址
+
+批量停止redis命令 :    ps -ef | grep redis | awk '{print $2}' | xargs kill -9 
+
+
+集群操作命令 : redis-trib create --replicas 1 127.0.0.1:7114 127.0.0.1:7115 127.0.0.1:7116 127.0.0.1:7111 127.0.0.1:7112 127.0.0.1:7113
+
+redis-trib create --replicas 1  39.108.86.193:7115 39.108.86.193:7116 39.108.86.193:7111 39.108.86.193:7112 39.108.86.193:7113
+
+启动命令 :
+/usr/local/redis3/bin/redis-server  /usr/local/redis3/cluster/7116/redis-7116.conf 
+/usr/local/redis3/bin/redis-server  /usr/local/redis3/cluster/7115/redis-7115.conf 
+/usr/local/redis3/bin/redis-server  /usr/local/redis3/cluster/7114/redis-7114.conf 
+/usr/local/redis3/bin/redis-server  /usr/local/redis3/cluster/7113/redis-7113.conf 
+/usr/local/redis3/bin/redis-server  /usr/local/redis3/cluster/7112/redis-7112.conf 
+/usr/local/redis3/bin/redis-server  /usr/local/redis3/cluster/7111/redis-7111.conf 
+
+
+rm -rf /usr/local/redis3/cluster/7111/appendonly.aof   
+rm -rf /usr/local/redis3/cluster/7111/nodes.conf
+rm -rf /usr/local/redis3/cluster/7111/redis_7111.pid 
+
+rm -rf /usr/local/redis3/cluster/7112/appendonly.aof   
+rm -rf /usr/local/redis3/cluster/7112/nodes.conf
+rm -rf /usr/local/redis3/cluster/7112/redis_7112.pid 
+
+rm -rf /usr/local/redis3/cluster/7113/appendonly.aof   
+rm -rf /usr/local/redis3/cluster/7113/nodes.conf
+rm -rf /usr/local/redis3/cluster/7113/redis_7113.pid 
+
+rm -rf /usr/local/redis3/cluster/7114/appendonly.aof   
+rm -rf /usr/local/redis3/cluster/7114/nodes.conf
+rm -rf /usr/local/redis3/cluster/7114/redis_7114.pid 
+
+rm -rf /usr/local/redis3/cluster/7115/appendonly.aof   
+rm -rf /usr/local/redis3/cluster/7115/nodes.conf
+rm -rf /usr/local/redis3/cluster/7115/redis_7115.pid 
+
+rm -rf /usr/local/redis3/cluster/7116/appendonly.aof   
+rm -rf /usr/local/redis3/cluster/7116/nodes.conf
+rm -rf /usr/local/redis3/cluster/7116/redis_7116.pid 
+
+
+redis.conf 配置解析
+
+daemonize no    默认情况下 redis 不是作为守护进程运行的，如果你想让它在后台运行，你就把它改成 yes。 当redis作为守护进程运行的时候，它会写一个 pid 到 /var/run/redis.pid 文件里面。
+pidfile /var/run/redis.pid  当redis作为守护进程运行的时候，它会把 pid 默认写到 /var/run/redis.pid 文件里面，但是你可以在这里自己制定它的文件位置。
+port 6379 监听端口号，默认为 6379，如果你设为 0 ，redis 将不在 socket 上监听任何客户端连接。
+tcp-backlog 511  TCP 监听的最大容纳数量,在高并发的环境下，你需要把这个值调高以避免客户端连接缓慢的问题。 Linux 内核会一声不响的把这个值缩小成 /proc/sys/net/core/somaxconn 对应的值 所以你要修改这两个值才能达到你的预 
+bind 127.0.0.1 默认情况下，redis 在 server 上所有有效的网络接口上监听客户端连接 你如果只想让它在一个网络接口上监听，那你就绑定一个IP或者多个IP。
+# 指定 unix socket 的路径。
+# unixsocket /tmp/redis.sock
+# unixsocketperm 755
+timeout 0  指定在一个 client 空闲多少秒之后关闭连接（0 就是不管它）
+tcp-keepalive  60 tcp 心跳包 如果设置为非零，则在与客户端缺乏通讯的时候使用 SO_KEEPALIVE 发送 tcp acks 给客户端。推荐一个合理的值就是60秒
+loglevel notice 定义日志级别  debug (适用于开发或测试阶段)  verbose (many rarely useful info, but not a mess like the debug level) notice (适用于生产环境) warning (仅仅一些重要的消息被记录
+logfile ""  指定日志文件的位置
+databases 16  设置数据库的数目

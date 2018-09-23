@@ -1,0 +1,2 @@
+git version 查看 git 版本 
+git clone <repo> <directory>   从 git 拉取项目  repo:Git 仓库。  directory:本地目录

@@ -1,0 +1,3 @@
+ 39.108.86.193 5672  15672  guest guest
+ docker 安装 rabbitmq 
+ docker run -d --name myrabbitmq -p 5673:5673 -p 15673:15673 docker.io/rabbitmq:3-management

@@ -1,0 +1,65 @@
+docker  :
+镜像 : build  
+仓库 : ship 
+容器 : run
+
+镜像 : image 
+联合文件系统 :unionFS 将不同的文件目录 挂在到同一个目录下, 实现文件的分层 ,每一层都是只读
+
+deamon.json 生效命令 : sudo systemctl daemon-reload
+
+停止 service docker stop   /  systemctl stop docker
+重启 : sudo systemctl restart decker.service
+查看状态 : sudo systemctl status docker -1
+查看服务 : sudo docker info
+启动        systemctl start docker
+
+守护进程重启   sudo systemctl daemon-reload
+
+重启docker服务   systemctl restart  docker
+
+docker 操作命令 :
+docker pull [options] name [:tag]  拉取镜像
+docker save centos > /opt/centos.tar.gz  ???
+docker load <
+docker images [optins] 查看本机的镜像
+docker run -d [options] image [:tag] [command [arg...]  docker 启动命令
+docker run -d 后台运行 -p port:port 端口映射 -- name 指定容器名字
+
+
+docker ps 查看正在运行的镜像
+docker ps -a 查询所有容器
+docker rmi D(镜像id) 删除镜像
+docker rm  D(容器id) 删除容器
+docker exec [options] container command [arg...] 
+docker exec -it 容器id/镜像名称  /bin/bash 进入某一个镜像 
+docker logs D 容器id 查看容器启动日志
+docker commit 
+docker build -t
+docker stop 容器id
+docker start 容器id
+docker inspect name/id   获取容器/镜像的元数据
+ 端口映射 
+ 
+查看端口状态 : netstat -na | grep port
+
+Dockerfile 创建镜像的过程
+from  baseimage
+maintainer 
+run  执行命令
+copy  拷贝文件
+add 添加文件
+cmd 执行命令
+entrypoint [] 容器入口
+ecpose 暴露端口
+workdir 指定路径
+env 设置环境变量
+user 指定用户
+volume mount point
+
+
+
+
+docker build  执行创建过程
+
+ 
