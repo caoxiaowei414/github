@@ -1,6 +1,0 @@
-inurl:
-intext: 
-intitle:
-"查询内容"
-(查询内容)
-+内容+内容
