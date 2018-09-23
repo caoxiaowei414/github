@@ -1,0 +1,27 @@
+zookeeper : 
+	启动 :
+		1) 进入 cd  /home/caoxiaowei01/zookeeper-3.4.6/bin 
+		2)  ./zkServer.sh start	
+	关闭 :
+		2)  ./zkServer.sh stop
+
+dubbo 管控台启动:		
+		cd  /home/caoxiaowei01/dubbo_admin_tomcat/bin 
+		./startup.sh
+
+
+redis 启动 :　　
+	进入cd   /usr/local/redis/bin 目录 
+	redis-server /usr/local/redis/etc/redis.conf //启动redis
+
+　　pkill redis  //停止redis
+
+
+rabbitmq: rabbitmq-server start 启动 
+关闭:  rabbitmqctl stop或
+	  service rabbitmq-server stop
+
+mysql  启动命令 :
+	service mysqld start & &表示后台启动
+
+	

@@ -1,0 +1,6 @@
+zookeeper 
+    /home/caoxiaowei01/zookeeper-3.4.6/conf/zoo.cfg  文件下
+	的 server.1=192.168.1.106:2888:3888 ip需要修改
+  
+  dubbo监控中修改 : /home/caoxiaowei01/dubbo-monitor/conf.dubbo.properties 下的
+     dubbo.registry.address=zookeeper://127.0.0.1:2181  --> 127.0.0.1 可以改为外网地址
