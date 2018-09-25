@@ -1,160 +1,160 @@
-²é¿´ÊÇ·ñÆô¶¯ : ps -ef | grep xxxx
-²é¿´¶Ë¿Ú netstat -lntp | grep 8888
+æŸ¥çœ‹æ˜¯å¦å¯åŠ¨ : ps -ef | grep xxxx
+æŸ¥çœ‹ç«¯å£ netstat -lntp | grep 8888
 
-linux ÃüÁî :
-¸ü¸ÄÎÄ¼şÊôĞÔ :
- 1 :chgrp ¸ü¸ÄÎÄ¼şÊô×é (change group)
- chgrp -R Êô×éÃû ÎÄ¼şÃû   -R µİ¹éÎÄ¼şÊô×é
- 2 :chown ¸ü¸ÄÎÄ¼şÊôÖ÷ , Ò²¿ÉÒÔÍ¬Ê±¸ü¸ÄÎÄ¼şÊô×é 
- chown -R ÊôÖ÷Ãû [:Êô×éÃû] ÎÄ¼şÃû
- 3 :chmon ¸ü¸ÄÎÄ¼ş9¸öÊôĞÔ
- chmon -R 777 ÎÄ¼şorÄ¿Â¼
+linux å‘½ä»¤ :
+æ›´æ”¹æ–‡ä»¶å±æ€§ :
+ 1 :chgrp æ›´æ”¹æ–‡ä»¶å±ç»„ (change group)
+ chgrp -R å±ç»„å æ–‡ä»¶å   -R é€’å½’æ–‡ä»¶å±ç»„
+ 2 :chown æ›´æ”¹æ–‡ä»¶å±ä¸» , ä¹Ÿå¯ä»¥åŒæ—¶æ›´æ”¹æ–‡ä»¶å±ç»„ 
+ chown -R å±ä¸»å [:å±ç»„å] æ–‡ä»¶å
+ 3 :chmon æ›´æ”¹æ–‡ä»¶9ä¸ªå±æ€§
+ chmon -R 777 æ–‡ä»¶orç›®å½•
  
- ls  ÁĞ³öÄ¿Â¼ -a(È«²¿ÎÄ¼ş) -d(½öÁĞ³öÄ¿Â¼) -l (³¤×Ö·û´®ÏÔÊ¾)
- cd  ÇĞ»»Ä¿Â¼
- pwd ÏÔÊ¾Ä¿Ç°ËùÔÚµÄÄ¿Â¼ -P ÏÔÊ¾³öÈ·ÊµµÄÂ·¾¶,
- mkdir ´´½¨ÎÄ¼ş¼Ğ -m (Ö¸¶¨ÎÄ¼şÈ¨ÏŞ)   -p(µİ¹é´´½¨ÎÄ¼ş¼Ğ)
- rmdir É¾³ıÎÄ¼ş¼Ğ -p (µİ¹éÉ¾³ı¿ÕÎÄ¼ş¼Ğ)
- cp ÎÄ¼ş¸´ÖÆ -a (Ïàµ±ÓÚ pdr)
+ ls  åˆ—å‡ºç›®å½• -a(å…¨éƒ¨æ–‡ä»¶) -d(ä»…åˆ—å‡ºç›®å½•) -l (é•¿å­—ç¬¦ä¸²æ˜¾ç¤º)
+ cd  åˆ‡æ¢ç›®å½•
+ pwd æ˜¾ç¤ºç›®å‰æ‰€åœ¨çš„ç›®å½• -P æ˜¾ç¤ºå‡ºç¡®å®çš„è·¯å¾„,
+ mkdir åˆ›å»ºæ–‡ä»¶å¤¹ -m (æŒ‡å®šæ–‡ä»¶æƒé™)   -p(é€’å½’åˆ›å»ºæ–‡ä»¶å¤¹)
+ rmdir åˆ é™¤æ–‡ä»¶å¤¹ -p (é€’å½’åˆ é™¤ç©ºæ–‡ä»¶å¤¹)
+ cp æ–‡ä»¶å¤åˆ¶ -a (ç›¸å½“äº pdr)
 			 -d 
-			 -f Ç¿ÖÆ(force)µÄÒâË¼ ÈôÄ¿±êÎÄ¼ş´æÔÚÇÒÎŞ·¨´ò¿ª, ÔòÒÆ³ıºóÔÙÒ»´Î³¢ÊÔ
-			 -i ÈôÄ¿±êÎÄ¼ş´æÔÚ, ¸²¸ÇÊ±»áÑ¯ÎÊ
-			 -r µİ¹é³ÖĞø¸´ÖÆ,ÓÃÓÚÄ¿Â¼µÄ¸´ÖÆĞĞÎª
- rm(ÒÆ³ıÎÄ¼şºÍÄ¿Â¼) -f (force)Ç¿ÖÆµÄÒâË¼,ºöÂÔÎÄ¼şµÄ´æÔÚ,²»»á³öÏÖ¾¯¸æÌáÊ¾
-					-i »¥¶¯Ä£Ê½,»áÓĞÑ¯ÎÊ³öÏÖ
-					-r µİ¹éÉ¾³ı, ÓÃÓÚÉ¾³ıÄ¿Â¼, ´Ë²Ù×÷Î£ÏÕ
- mv (ÒÆ¶¯ÎÄ¼ş or ĞŞ¸ÄÎÄ¼şÃû)  -f(force)Ç¿ÖÆµÄÒâË¼, ÈôÄ¿±ê´æÔÚ,Ö±½Ó¸²¸Ç
-							  -i »¥¶¯Ä£Ê½,ÎÄ¼ş´æÔÚ»áÑ¯ÎÊ
-							  -u ÈôÎÄ¼ş´æÔÚ,ÇÒsource ±È½ÏĞÂ,²Å»áÖ´ĞĞupdate²Ù×÷
+			 -f å¼ºåˆ¶(force)çš„æ„æ€ è‹¥ç›®æ ‡æ–‡ä»¶å­˜åœ¨ä¸”æ— æ³•æ‰“å¼€, åˆ™ç§»é™¤åå†ä¸€æ¬¡å°è¯•
+			 -i è‹¥ç›®æ ‡æ–‡ä»¶å­˜åœ¨, è¦†ç›–æ—¶ä¼šè¯¢é—®
+			 -r é€’å½’æŒç»­å¤åˆ¶,ç”¨äºç›®å½•çš„å¤åˆ¶è¡Œä¸º
+ rm(ç§»é™¤æ–‡ä»¶å’Œç›®å½•) -f (force)å¼ºåˆ¶çš„æ„æ€,å¿½ç•¥æ–‡ä»¶çš„å­˜åœ¨,ä¸ä¼šå‡ºç°è­¦å‘Šæç¤º
+					-i äº’åŠ¨æ¨¡å¼,ä¼šæœ‰è¯¢é—®å‡ºç°
+					-r é€’å½’åˆ é™¤, ç”¨äºåˆ é™¤ç›®å½•, æ­¤æ“ä½œå±é™©
+ mv (ç§»åŠ¨æ–‡ä»¶ or ä¿®æ”¹æ–‡ä»¶å)  -f(force)å¼ºåˆ¶çš„æ„æ€, è‹¥ç›®æ ‡å­˜åœ¨,ç›´æ¥è¦†ç›–
+							  -i äº’åŠ¨æ¨¡å¼,æ–‡ä»¶å­˜åœ¨ä¼šè¯¢é—®
+							  -u è‹¥æ–‡ä»¶å­˜åœ¨,ä¸”source æ¯”è¾ƒæ–°,æ‰ä¼šæ‰§è¡Œupdateæ“ä½œ
 			
-ÎÄ¼şÄÚÈİµÄ²é¿´ :
-cat ÓÉµÚÒ»ĞĞ¿ªÊ¼ÏÔÊ¾ÎÄ¼şÄÚÈİ 	-n ÁĞ³öĞĞºÅ  ÏÔÊ¾¿Õ°×ĞĞ
-tac ÓÉ×îºóÒ»ĞĞ¿ªÊ¼ÏÔÊ¾ Óëcat Ïà·´, ¿ÉÒÔ¿´³ÉÊÇ cat ·´¹ıÀ´Ğ´
-nl ÏÔÊ¾ĞĞºÅ -ba ÏÔÊ¾ËùÓĞĞĞ 
-more ´ÓÍ·¿ªÊ¼ÏÔÊ¾ ¿Õ°×¼ü ÏÂÒ»Ò³  enter ÏÂÒ»ĞĞ  /×Ö·û´® ÔÚÎÄ¼şÖĞËÑË÷ q Àë¿ªÎÄ¼ş
-less ´ÓÍ·¿ªÊ¼ÏÔÊ¾ ¿Õ°×¼ü ÏÂÒ»Ò³  pagedown ÏÂÒ»Ò³   pageup ÉÏÒ»Ò³  /×Ö·û´® ÏòÏÂËÑË÷   ?×Ö·û´® ÏòÉÏËÑË÷  n/NÖØ¸´Ç°ºóËÑË÷ q Àë¿ªless		
-head -n Êı×Ö ÎÄ¼şÃû ÏÔÊ¾Í·¼¸ĞĞÎÄ¼ş  
-tail -n Êı×Ö ÎÄ¼şÃû ÏÔÊ¾¼¸ĞĞµÄÒâË¼ -f  ³ÖĞøÊä³öÎÄ¼ş	
+æ–‡ä»¶å†…å®¹çš„æŸ¥çœ‹ :
+cat ç”±ç¬¬ä¸€è¡Œå¼€å§‹æ˜¾ç¤ºæ–‡ä»¶å†…å®¹ 	-n åˆ—å‡ºè¡Œå·  æ˜¾ç¤ºç©ºç™½è¡Œ
+tac ç”±æœ€åä¸€è¡Œå¼€å§‹æ˜¾ç¤º ä¸cat ç›¸å, å¯ä»¥çœ‹æˆæ˜¯ cat åè¿‡æ¥å†™
+nl æ˜¾ç¤ºè¡Œå· -ba æ˜¾ç¤ºæ‰€æœ‰è¡Œ 
+more ä»å¤´å¼€å§‹æ˜¾ç¤º ç©ºç™½é”® ä¸‹ä¸€é¡µ  enter ä¸‹ä¸€è¡Œ  /å­—ç¬¦ä¸² åœ¨æ–‡ä»¶ä¸­æœç´¢ q ç¦»å¼€æ–‡ä»¶
+less ä»å¤´å¼€å§‹æ˜¾ç¤º ç©ºç™½é”® ä¸‹ä¸€é¡µ  pagedown ä¸‹ä¸€é¡µ   pageup ä¸Šä¸€é¡µ  /å­—ç¬¦ä¸² å‘ä¸‹æœç´¢   ?å­—ç¬¦ä¸² å‘ä¸Šæœç´¢  n/Né‡å¤å‰åæœç´¢ q ç¦»å¼€less		
+head -n æ•°å­— æ–‡ä»¶å æ˜¾ç¤ºå¤´å‡ è¡Œæ–‡ä»¶  
+tail -n æ•°å­— æ–‡ä»¶å æ˜¾ç¤ºå‡ è¡Œçš„æ„æ€ -f  æŒç»­è¾“å‡ºæ–‡ä»¶	
 
-linux  ²é¿´ ²é¿´ÒÑ°²×°µÄ³ÌĞò
-		rmp °²×°°ü
+linux  æŸ¥çœ‹ æŸ¥çœ‹å·²å®‰è£…çš„ç¨‹åº
+		rmp å®‰è£…åŒ…
 		
 		
 		
-		´´½¨ÎÄ¼ş : 
+		åˆ›å»ºæ–‡ä»¶ : 
  vim  
  touch 
 
-ÎÄ¼şËÑË÷   .conf »ù±¾¶¼ÊÇÅäÖÃÎÄ¼şºó×º
-	locate :  ÎÄ¼şËÑË÷  /var/lib/mlocate  Ö»ÄÜËÑË÷ÎÄ¼şÃû
-				 °´ÕÕ /etc/updatedb.conf ÎÄ¼şÅäÖÃ¹æÔòËÑË÷
-				updatedb ¸üĞÂÎÄ¼şÊı¾İ¿âÎÄ¼ş
+æ–‡ä»¶æœç´¢   .conf åŸºæœ¬éƒ½æ˜¯é…ç½®æ–‡ä»¶åç¼€
+	locate :  æ–‡ä»¶æœç´¢  /var/lib/mlocate  åªèƒ½æœç´¢æ–‡ä»¶å
+				 æŒ‰ç…§ /etc/updatedb.conf æ–‡ä»¶é…ç½®è§„åˆ™æœç´¢
+				updatedb æ›´æ–°æ–‡ä»¶æ•°æ®åº“æ–‡ä»¶
 
-ÃüÁîµÄËÑË÷ÃüÁî whereis ²é¿´ÃüÁîËùÔÚµÄÎ»ÖÃ ÏÔÊ¾°ïÖúÎÄµµ
-			   which ²é¿´ÃüÁîËùÔÚµÄÎ»ÖÃ ÏÔÊ¾±ğÃû
+å‘½ä»¤çš„æœç´¢å‘½ä»¤ whereis æŸ¥çœ‹å‘½ä»¤æ‰€åœ¨çš„ä½ç½® æ˜¾ç¤ºå¸®åŠ©æ–‡æ¡£
+			   which æŸ¥çœ‹å‘½ä»¤æ‰€åœ¨çš„ä½ç½® æ˜¾ç¤ºåˆ«å
 				whoani
 				
 				
-				ĞŞ¸Ä·À»ğÇ½ÅäÖÃÎÄ¼şÖ®Ç°£¬ĞèÒª¶ÔÖ®Ç°·À»ğÇ½×öºÃ±¸·İ
+				ä¿®æ”¹é˜²ç«å¢™é…ç½®æ–‡ä»¶ä¹‹å‰ï¼Œéœ€è¦å¯¹ä¹‹å‰é˜²ç«å¢™åšå¥½å¤‡ä»½
 
-ÖØÆô·À»ğÇ½ºó£¬ĞèÒªÈ·ÈÏ·À»ğÇ½×´Ì¬ºÍ·À»ğÇ½¹æÔòÊÇ·ñ¼ÓÔØ£¬ÈôÖØÆôÊ§°Ü»ò¹æÔò¼ÓÔØÊ§°Ü£¬ÔòËùÓĞÇëÇó¶¼»á±»·À»ğÇ½
+é‡å¯é˜²ç«å¢™åï¼Œéœ€è¦ç¡®è®¤é˜²ç«å¢™çŠ¶æ€å’Œé˜²ç«å¢™è§„åˆ™æ˜¯å¦åŠ è½½ï¼Œè‹¥é‡å¯å¤±è´¥æˆ–è§„åˆ™åŠ è½½å¤±è´¥ï¼Œåˆ™æ‰€æœ‰è¯·æ±‚éƒ½ä¼šè¢«é˜²ç«å¢™
 
 1.
 firewall-cmd --state        
-#²é¿´firewallµÄ×´Ì¬
+#æŸ¥çœ‹firewallçš„çŠ¶æ€
 firewall-cmd --list-all 
-#²é¿´·À»ğÇ½¹æÔò£¨Ö»ÏÔÊ¾/etc/firewalld/zones/public.xmlÖĞ·À»ğÇ½²ßÂÔ£©
+#æŸ¥çœ‹é˜²ç«å¢™è§„åˆ™ï¼ˆåªæ˜¾ç¤º/etc/firewalld/zones/public.xmlä¸­é˜²ç«å¢™ç­–ç•¥ï¼‰
 firewall-cmd --list-all-zones 
-#²é¿´ËùÓĞµÄ·À»ğÇ½²ßÂÔ£¨¼´ÏÔÊ¾/etc/firewalld/zones/ÏÂµÄËùÓĞ²ßÂÔ£©
+#æŸ¥çœ‹æ‰€æœ‰çš„é˜²ç«å¢™ç­–ç•¥ï¼ˆå³æ˜¾ç¤º/etc/firewalld/zones/ä¸‹çš„æ‰€æœ‰ç­–ç•¥ï¼‰
 firewall-cmd --reload
-#ÖØĞÂ¼ÓÔØÅäÖÃÎÄ¼ş
+#é‡æ–°åŠ è½½é…ç½®æ–‡ä»¶
  
-2¡¢¹Ø±Õfirewall£º
-systemctl stop firewalld.service #Í£Ö¹firewall
-systemctl disable firewalld.service #½ûÖ¹firewall¿ª»úÆô¶¯
-firewall-cmd --state #²é¿´Ä¬ÈÏ·À»ğÇ½×´Ì¬£¨¹Ø±ÕºóÏÔÊ¾notrunning£¬¿ªÆôºóÏÔÊ¾running£©
+2ã€å…³é—­firewallï¼š
+systemctl stop firewalld.service #åœæ­¢firewall
+systemctl disable firewalld.service #ç¦æ­¢firewallå¼€æœºå¯åŠ¨
+firewall-cmd --state #æŸ¥çœ‹é»˜è®¤é˜²ç«å¢™çŠ¶æ€ï¼ˆå…³é—­åæ˜¾ç¤ºnotrunningï¼Œå¼€å¯åæ˜¾ç¤ºrunningï¼‰
  
-1¡¢firewalldµÄ»ù±¾Ê¹ÓÃ
-Æô¶¯£º systemctl start firewalld
-²é¿´×´Ì¬£º systemctl status firewalld 
-Í£Ö¹£º systemctl disable firewalld
-½ûÓÃ£º systemctl stop firewalld
+1ã€firewalldçš„åŸºæœ¬ä½¿ç”¨
+å¯åŠ¨ï¼š systemctl start firewalld
+æŸ¥çœ‹çŠ¶æ€ï¼š systemctl status firewalld 
+åœæ­¢ï¼š systemctl disable firewalld
+ç¦ç”¨ï¼š systemctl stop firewalld
  
-2.systemctlÊÇCentOS7µÄ·şÎñ¹ÜÀí¹¤¾ßÖĞÖ÷ÒªµÄ¹¤¾ß£¬ËüÈÚºÏÖ®Ç°serviceºÍchkconfigµÄ¹¦ÄÜÓÚÒ»Ìå¡£
-Æô¶¯Ò»¸ö·şÎñ£ºsystemctl start firewalld.service
-¹Ø±ÕÒ»¸ö·şÎñ£ºsystemctl stop firewalld.service
-ÖØÆôÒ»¸ö·şÎñ£ºsystemctl restart firewalld.service
-ÏÔÊ¾Ò»¸ö·şÎñµÄ×´Ì¬£ºsystemctl status firewalld.service
-ÔÚ¿ª»úÊ±ÆôÓÃÒ»¸ö·şÎñ£ºsystemctl enable firewalld.service
-ÔÚ¿ª»úÊ±½ûÓÃÒ»¸ö·şÎñ£ºsystemctl disable firewalld.service
-²é¿´·şÎñÊÇ·ñ¿ª»úÆô¶¯£ºsystemctl is-enabled firewalld.service
-²é¿´ÒÑÆô¶¯µÄ·şÎñÁĞ±í£ºsystemctl list-unit-files|grep enabled
-²é¿´Æô¶¯Ê§°ÜµÄ·şÎñÁĞ±í£ºsystemctl --failedd
+2.systemctlæ˜¯CentOS7çš„æœåŠ¡ç®¡ç†å·¥å…·ä¸­ä¸»è¦çš„å·¥å…·ï¼Œå®ƒèåˆä¹‹å‰serviceå’Œchkconfigçš„åŠŸèƒ½äºä¸€ä½“ã€‚
+å¯åŠ¨ä¸€ä¸ªæœåŠ¡ï¼šsystemctl start firewalld.service
+å…³é—­ä¸€ä¸ªæœåŠ¡ï¼šsystemctl stop firewalld.service
+é‡å¯ä¸€ä¸ªæœåŠ¡ï¼šsystemctl restart firewalld.service
+æ˜¾ç¤ºä¸€ä¸ªæœåŠ¡çš„çŠ¶æ€ï¼šsystemctl status firewalld.service
+åœ¨å¼€æœºæ—¶å¯ç”¨ä¸€ä¸ªæœåŠ¡ï¼šsystemctl enable firewalld.service
+åœ¨å¼€æœºæ—¶ç¦ç”¨ä¸€ä¸ªæœåŠ¡ï¼šsystemctl disable firewalld.service
+æŸ¥çœ‹æœåŠ¡æ˜¯å¦å¼€æœºå¯åŠ¨ï¼šsystemctl is-enabled firewalld.service
+æŸ¥çœ‹å·²å¯åŠ¨çš„æœåŠ¡åˆ—è¡¨ï¼šsystemctl list-unit-files|grep enabled
+æŸ¥çœ‹å¯åŠ¨å¤±è´¥çš„æœåŠ¡åˆ—è¡¨ï¼šsystemctl --failedd
 
-3.ÅäÖÃfirewalld-cmd
+3.é…ç½®firewalld-cmd
 
-²é¿´°æ±¾£º firewall-cmd --version
-²é¿´°ïÖú£º firewall-cmd --help
-ÏÔÊ¾×´Ì¬£º firewall-cmd --state
-²é¿´ËùÓĞ´ò¿ªµÄ¶Ë¿Ú£º firewall-cmd --zone=public --list-ports
-¸üĞÂ·À»ğÇ½¹æÔò£º firewall-cmd --reload
-²é¿´ÇøÓòĞÅÏ¢:  firewall-cmd --get-active-zones
-²é¿´Ö¸¶¨½Ó¿ÚËùÊôÇøÓò£º firewall-cmd --get-zone-of-interface=eth0
-¾Ü¾øËùÓĞ°ü£ºfirewall-cmd --panic-on
-È¡Ïû¾Ü¾ø×´Ì¬£º firewall-cmd --panic-off
-²é¿´ÊÇ·ñ¾Ü¾ø£º firewall-cmd --query-panic
+æŸ¥çœ‹ç‰ˆæœ¬ï¼š firewall-cmd --version
+æŸ¥çœ‹å¸®åŠ©ï¼š firewall-cmd --help
+æ˜¾ç¤ºçŠ¶æ€ï¼š firewall-cmd --state
+æŸ¥çœ‹æ‰€æœ‰æ‰“å¼€çš„ç«¯å£ï¼š firewall-cmd --zone=public --list-ports
+æ›´æ–°é˜²ç«å¢™è§„åˆ™ï¼š firewall-cmd --reload
+æŸ¥çœ‹åŒºåŸŸä¿¡æ¯:  firewall-cmd --get-active-zones
+æŸ¥çœ‹æŒ‡å®šæ¥å£æ‰€å±åŒºåŸŸï¼š firewall-cmd --get-zone-of-interface=eth0
+æ‹’ç»æ‰€æœ‰åŒ…ï¼šfirewall-cmd --panic-on
+å–æ¶ˆæ‹’ç»çŠ¶æ€ï¼š firewall-cmd --panic-off
+æŸ¥çœ‹æ˜¯å¦æ‹’ç»ï¼š firewall-cmd --query-panic
  
-ÄÇÔõÃ´¿ªÆôÒ»¸ö¶Ë¿ÚÄØ
-Ìí¼Ó
-firewall-cmd --zone=public --add-port=80/tcp --permanent    £¨--permanentÓÀ¾ÃÉúĞ§£¬Ã»ÓĞ´Ë²ÎÊıÖØÆôºóÊ§Ğ§£©
-ÖØĞÂÔØÈë
+é‚£æ€ä¹ˆå¼€å¯ä¸€ä¸ªç«¯å£å‘¢
+æ·»åŠ 
+firewall-cmd --zone=public --add-port=80/tcp --permanent    ï¼ˆ--permanentæ°¸ä¹…ç”Ÿæ•ˆï¼Œæ²¡æœ‰æ­¤å‚æ•°é‡å¯åå¤±æ•ˆï¼‰
+é‡æ–°è½½å…¥
 firewall-cmd --reload
-²é¿´
+æŸ¥çœ‹
 firewall-cmd --zone= public --query-port=80/tcp	
-É¾³ı
+åˆ é™¤
 firewall-cmd --zone= public --remove-port=80/tcp --permanent
 
 
-¶¨Ê±ÈÎÎñ  centos 7:
+å®šæ—¶ä»»åŠ¡  centos 7:
 
-/sbin/service crond start Æô¶¯ 
-/sbin/service crond stop Í£Ö¹
-/sbin/service crond restart ÖØÆô
-/sbin/service crond reload ÖØĞÂ¼ÓÔØÅäÖÃÎÄ¼ş
-service crond status ²é¿´¶¨Ê±ÈÎÎñ×´Ì¬
-crontab -l ²é¿´¶¨Ê±ÈÎÎñÁĞ±í -u ÓÃ»§ -e ½øÈë±à¼­ 
+/sbin/service crond start å¯åŠ¨ 
+/sbin/service crond stop åœæ­¢
+/sbin/service crond restart é‡å¯
+/sbin/service crond reload é‡æ–°åŠ è½½é…ç½®æ–‡ä»¶
+service crond status æŸ¥çœ‹å®šæ—¶ä»»åŠ¡çŠ¶æ€
+crontab -l æŸ¥çœ‹å®šæ—¶ä»»åŠ¡åˆ—è¡¨ -u ç”¨æˆ· -e è¿›å…¥ç¼–è¾‘ 
 
-Ñ¹ËõÃüÁî : zip -r Ñ¹ËõÎÄ¼şÃû  Ñ¹ËõÎÄ¼ş
-½âÑ¹Ëõ : unzip 
-.gz¸ñÊ½ÎªÑ¹Ëõ°ü
-gzip -c ÎÄ¼şÔ´ > Ñ¹ËõÎÄ¼ş.gz
-gzip -r Ä¿Â¼ Ñ¹ËõÄ¿Â¼ÀïÃæµÄÎÄ¼ş
-gzip -d  »òÕß  gunzip ½âÑ¹Ëõ
+å‹ç¼©å‘½ä»¤ : zip -r å‹ç¼©æ–‡ä»¶å  å‹ç¼©æ–‡ä»¶
+è§£å‹ç¼© : unzip 
+.gzæ ¼å¼ä¸ºå‹ç¼©åŒ…
+gzip -c æ–‡ä»¶æº > å‹ç¼©æ–‡ä»¶.gz
+gzip -r ç›®å½• å‹ç¼©ç›®å½•é‡Œé¢çš„æ–‡ä»¶
+gzip -d  æˆ–è€…  gunzip è§£å‹ç¼©
 
-¹Ø»úºÍÖØÆô :
-shutdow Ñ¡Ïî Ê±¼ä -h ¹Ø»ú
-                  -r ÖØÆô
-				  -c È¡ÏûÉÏÒ»Ìõ
+å…³æœºå’Œé‡å¯ :
+shutdow é€‰é¡¹ æ—¶é—´ -h å…³æœº
+                  -r é‡å¯
+				  -c å–æ¶ˆä¸Šä¸€æ¡
 				  
-¹ÒÔØÃüÁî :
+æŒ‚è½½å‘½ä»¤ :
 
-ÆäËûÃüÁî :
-W ²é¿´ÓÃ»§
-who ²é¿´µÇÂ½ÓÃ»§
-last ²é¿´ÀúÊ·µÇÂ½ĞÅÏ¢  /var/log/wtep	
-lastlog ²é¿´ËùÓĞÓÃ»§			  
+å…¶ä»–å‘½ä»¤ :
+W æŸ¥çœ‹ç”¨æˆ·
+who æŸ¥çœ‹ç™»é™†ç”¨æˆ·
+last æŸ¥çœ‹å†å²ç™»é™†ä¿¡æ¯  /var/log/wtep	
+lastlog æŸ¥çœ‹æ‰€æœ‰ç”¨æˆ·			  
 				  
 
- renlevel ²é¿´ÏµÍ³µÄÔËĞĞ¼¶±ğ
- init 0-6 ÉèÖÃÏµÍ³µÄÔËĞĞ¼¶±ğ
- /ect/inittab ÉèÖÃÏµÍ³ÔËĞĞ¼¶±ğ
- chkconfig --list ²é¿´ rmp °ü°²×°µÄ·şÎñ
- Ô´Âë°ü°²×°Î»ÖÃ  /user/local/src ÏÂ
- ²é¿´·şÎñÆô¶¯×´Ì¬  : ps 
+ renlevel æŸ¥çœ‹ç³»ç»Ÿçš„è¿è¡Œçº§åˆ«
+ init 0-6 è®¾ç½®ç³»ç»Ÿçš„è¿è¡Œçº§åˆ«
+ /ect/inittab è®¾ç½®ç³»ç»Ÿè¿è¡Œçº§åˆ«
+ chkconfig --list æŸ¥çœ‹ rmp åŒ…å®‰è£…çš„æœåŠ¡
+ æºç åŒ…å®‰è£…ä½ç½®  /user/local/src ä¸‹
+ æŸ¥çœ‹æœåŠ¡å¯åŠ¨çŠ¶æ€  : ps 
 					 
 
-netstat - antul ²é¿´¶Ë¿Ú
-ifup ÆôÓÃÍø¿¨
-ifdown ½ûÓÃÍø¿¨
-nslookup ÓòÃû ÓòÃû½âÎö
+netstat - antul æŸ¥çœ‹ç«¯å£
+ifup å¯ç”¨ç½‘å¡
+ifdown ç¦ç”¨ç½‘å¡
+nslookup åŸŸå åŸŸåè§£æ
 				
