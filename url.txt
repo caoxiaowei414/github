@@ -1,6 +1,6 @@
-Mybatis-PageHelper github 分页插件 
+Mybatis-PageHelper github 鍒嗛〉鎻掍欢 
 
-https://github.com/Wechat-Group/weixin-java-tools 微信插件 weixin-java-tools
+https://github.com/Wechat-Group/weixin-java-tools 寰俊鎻掍欢 weixin-java-tools
 
 
 

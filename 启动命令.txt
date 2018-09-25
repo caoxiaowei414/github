@@ -1,27 +1,27 @@
 zookeeper : 
-	Æô¶¯ :
-		1) ½øÈë cd  /home/caoxiaowei01/zookeeper-3.4.6/bin 
+	å¯åŠ¨ :
+		1) è¿›å…¥ cd  /home/caoxiaowei01/zookeeper-3.4.6/bin 
 		2)  ./zkServer.sh start	
-	¹Ø±Õ :
+	å…³é—­ :
 		2)  ./zkServer.sh stop
 
-dubbo ¹Ü¿ØÌ¨Æô¶¯:		
+dubbo ç®¡æ§å°å¯åŠ¨:		
 		cd  /home/caoxiaowei01/dubbo_admin_tomcat/bin 
 		./startup.sh
 
 
-redis Æô¶¯ :¡¡¡¡
-	½øÈëcd   /usr/local/redis/bin Ä¿Â¼ 
-	redis-server /usr/local/redis/etc/redis.conf //Æô¶¯redis
+redis å¯åŠ¨ :ã€€ã€€
+	è¿›å…¥cd   /usr/local/redis/bin ç›®å½• 
+	redis-server /usr/local/redis/etc/redis.conf //å¯åŠ¨redis
 
-¡¡¡¡pkill redis  //Í£Ö¹redis
+ã€€ã€€pkill redis  //åœæ­¢redis
 
 
-rabbitmq: rabbitmq-server start Æô¶¯ 
-¹Ø±Õ:  rabbitmqctl stop»ò
+rabbitmq: rabbitmq-server start å¯åŠ¨ 
+å…³é—­:  rabbitmqctl stopæˆ–
 	  service rabbitmq-server stop
 
-mysql  Æô¶¯ÃüÁî :
-	service mysqld start & &±íÊ¾ºóÌ¨Æô¶¯
+mysql  å¯åŠ¨å‘½ä»¤ :
+	service mysqld start & &è¡¨ç¤ºåå°å¯åŠ¨
 
 	
