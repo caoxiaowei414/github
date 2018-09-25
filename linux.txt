@@ -153,5 +153,8 @@ lastlog 查看所有用户
  查看服务启动状态  : ps 
 					 
 
-
+netstat - antul 查看端口
+ifup 启用网卡
+ifdown 禁用网卡
+nslookup 域名 域名解析
 				
