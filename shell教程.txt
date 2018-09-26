@@ -70,4 +70,12 @@ read 等待输入
  fi		
 
 
- 
+if else 语法
+if [  ] 
+   then
+     执行代码
+
+   else
+      执行代码
+
+ fi
