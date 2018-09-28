@@ -159,3 +159,4 @@ ifdown 禁用网卡
 nslookup 域名 域名解析
 arp -a
 
+http://man.linuxde.net Linux 地址
