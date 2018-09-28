@@ -157,4 +157,5 @@ netstat - antul 查看端口
 ifup 启用网卡
 ifdown 禁用网卡
 nslookup 域名 域名解析
-				
+arp -a
+
