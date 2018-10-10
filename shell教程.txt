@@ -82,3 +82,18 @@ if [  ]
  
  
  sed :
+ 
+ 
+ case 语句语法
+ case  "" in
+      "")
+			then
+			;;
+	  "")
+			then
+			;;
+	   *)
+            ;;
+esac
+			
+ 
