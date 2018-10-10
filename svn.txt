@@ -1,0 +1,39 @@
+svnlook 查看版本库信息
+svnadmin 	版本库的创建/导入/导出/删除
+svnserver 
+
+svnadmin create /path/repos 
+svnadmin create --fs-type fsfs xxxx 数据保存的类型
+
+版本库配置以及权限分组
+配置文件位于 /path/repos/conf/
+authz --配置用户组以及用户权限
+passwd -- 配置用户和密码
+svnserve.conf -- 配置默认权限,权限配置文件以及密码配置文件
+svnserve -d -r /home/svn/imooc 运行版本库
+
+svn 检出
+ svn co/checkout svn://ip --username xxxx --password xxxx
+ svn服务自启动 : 开机启动
+ checkout 检出
+ export  导出 
+ svn checkout -r 2 检出版本2
+ svn export -r 3 导出版本3
+ svn 客户端命令 :
+ svn add  添加到版本控制
+    svn add js --non-recursive 不添加文件夹里面的内容
+	svn add * --force 强制 添加所有
+     commint 提交修改到服务器(创建一个新的版本号)
+	 svn commint/ci -m "备注" 文件名
+	 svn ci -m "" * 提交所有
+	 update 更新工作副本
+	 svn update/up -r 版本号 文件名  更新成某个版本
+	 svn up * 
+	 delete 从版本库中删除文件或目录
+	 svn delete/del remove/rm -m "" 文件名
+	 diff 版本差异比较
+	 svn diff /di 文件名
+	 
+	 mkdir 创建目录并增加到版本控制
+	 cat 不检出工作副本直接查看指定文件
+	 
