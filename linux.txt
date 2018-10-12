@@ -160,3 +160,21 @@ nslookup 域名 域名解析
 arp -a
 
 http://man.linuxde.net Linux 地址
+
+ps aux 查看运行所有的进程
+pstree -pu  
+top 判断系统健康状态 -d 
+
+Linux 杀死进程
+kill -l 查看可用的进程信号
+kill -1 重新读取配置文件
+killall [选项] [信号] 进程名 按照进程名杀死进程
+	选项 : -i 交互式 ,询问是否要杀死进程
+		   -I 忽略进程名大小写
+pkill -9 -t 终端号  剔除用户 
+修改进程的优先级
+
+
+
+
+
