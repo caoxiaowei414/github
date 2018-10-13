@@ -174,7 +174,49 @@ killall [选项] [信号] 进程名 按照进程名杀死进程
 pkill -9 -t 终端号  剔除用户 
 修改进程的优先级
 
+工作管理
+ 命令 & 后台执行 但是终端关闭  
+ ctrl+z 暂停程序执行
+ 后台命令脱离终端的方法 (三种)
+ 1) , 将要执行的命令 放在 /etc/rc.local 文件夹下
+ 2) , 使用系统定时任务,让系统在指定的时间执行某个后台命令
+ 3) , nohup 命令 &  ; 脱离终端执行 , 终端关闭程序也会继续执行
+ 将
 
+ jobs 查看后台运行的程序  -l 
+ 
+ Linux 查看系统资源
+ vmstat 刷新延时  刷新次数
+ dmesg
+ free 查看内存状态
+ 
+ proc 保存内存中的信息
+ uptime 开机时间
+ uname -a 查看内核信息
 
-
+系统定时任务
+	at 一次性执行定时任务
+	crontab 循环定时任务
+	系统的crontab 设置
+	anacron 配置
+	
+ 	at [选项] 时间
+		选项 -m  当at 工作完后,无论是否命令有输出, 
+		都用email 通知执行at命令的用户
+	-c 工作号 
+	atq 查看定时任务列表
+	
+	/etc/cron.deny  用户黑名单
+		cron.allow  白名单  优先级高于黑名单
+		
+	crontab [选项]	
+			-e:编辑crontab 定时任务 
+			 cron 表达式 执行的任务
+			 * * * * * 分 时 日 月 周
+			-l:查询crontab任务
+			-r:删除当前用户所有的crontab任务
+	编辑 /etc/crontab 不需要绑定用户		
+	anacron 配置  /var/spool/anacrom
+				  /etc/anacrontab
+chkconfig --list | grep 查看是否安装了某服务	
 
