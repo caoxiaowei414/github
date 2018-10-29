@@ -1,0 +1,2 @@
+安装第三方包  
+ setting ->project --> project interpreter -> 加号 --> install package
