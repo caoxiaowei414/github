@@ -1,2 +1,9 @@
 安装第三方包  
  setting ->project --> project interpreter -> 加号 --> install package
+ 
+ 
+ 内置函数
+ 
+ import 包名 as 别名
+ from 函数 import 包名
+ 

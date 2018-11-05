@@ -1,0 +1,103 @@
+lambda 表达式
+	匿名函数  
+	
+	Java8 引入了  -> 箭头操作符  lambda 操作符
+	左侧 : lambda 表达式的参数列表
+	右侧 : lambda 表达式所需要执行的功能  即 lammbda 体
+	
+	语法格式一 : 无参数 无返回值
+		()->system.out.println("")
+	
+	语法格式er : 一个参数 无返回值 (小括号可以不写)
+		(e) -> system.out.println
+		
+	语法格式三 : 
+		有多个参数,并且 lambda 体 有多条语句 , 而且有返回值\
+		(x ,y, ...) ->{
+			...
+			return ""
+		}
+		demo :
+		  Comparator<Integer> comparator = (x, y) -> {
+            System.out.println(x+y);
+            return Integer.compare(x, y);
+        };
+		
+	lambda : 左右遇一括号省, 左侧推断类型省
+	
+	lambda 表达式 需要函数式接口 :
+					若接口只有一个抽象方法接口 称为函数式接口
+					可以使用 @functioninterface 用于检测是否是一个 函数式接口
+	
+	java8 内置四大核心函数式接口 
+		Comsumer<T> 消费型接口
+			void accept (T t)
+		
+		supplier<T> 供给型接口
+			T get()
+			
+		function< T R> 函数式接口
+			R applay (T t)
+			
+		predicate <T> 断言型接口
+			boolean test(T t)
+			
+			
+	方法引用和构造器引用
+		方法引用 :若lambda 体中的内容已经实现, 我们就可以使用方法引用
+		主要用三种语法格式 :
+			对象::实例方法名
+			类::静态方法名
+			类::实例方法名
+			
+		构造器引用
+			类名::new
+			
+		数组引用
+			type []:: new
+			
+	
+	
+			
+	stream Api
+		stream 操作的三个步骤
+			创建stream 一个数据源(数组 或 集合),获取一个流
+			中间操作 一个中间操作链, 对数据源进行操作
+			终止操作(终端操作)
+			一个终止操作,执行中间操作链,并产生结果
+			
+		创建流的4 种方式 :
+			1: 可以通过 collection系列集合提供的stream() 或parallelstream
+			2: 通过arrays 中的静态方法 stream 获取数组流
+			3:通过 stream 的静态方法 of方法
+			4:创建无限流
+				迭代 stream.iterate()
+				生产Stream.generate()
+			
+		中间操作 :
+			筛选和切片
+				filter 过滤
+				limit 个数
+				skip 删除前几个
+				distinct 去重
+		
+		映射	
+			map 接受lambda,将元素转换成其他形式或提取信息,
+			接收一个函数作为参数,该函数会被接收应用到每一个
+			元素上,并将其映射成一个新元素
+			flatmap 接收一个函数作为参数,将流中的每一个值
+			都换成另一个流,然后把所有的流连接成一个新流
+			
+		stream 终止操作
+			查找与匹配
+				allMath - 检查是否匹配所有元素
+				anymact 检查是否至少匹配一个元素
+				noneMath 检查是否没有匹配
+				findFirst 返回第一个元素
+			归约 reduce
+			收集 collect
+				
+				
+	并行流 		
+					
+	
