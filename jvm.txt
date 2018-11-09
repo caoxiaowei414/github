@@ -1,0 +1,14 @@
+javac  xxxx.java 将源码文件编程成 .class 文件
+javadoc xxxxx.java 生成 html 文件  类似于 在线api
+javap -verbose 文件名 查看.class 的组成
+
+
+1.打包jar包
+Jar {ctxu} {vfm0M}{jar-文件} {manifest-文件} {-C 目录}文件名
+例1：jar cf HelloWorld.jar mypackage,该命令将包mypackage中的文件打包，没有执行过程显示，执行结果是再当前目录产生了HelloWorld.jar文件
+例2：jar cvf HelloWorld.jar mypackage,该命令将包mypackage中的文件打包，有执行过程显示，执行结果是再当前目录产生了HelloWorld.jar文件
+例3：jar xvf HelloWorld.java解开HelloWorld.java到当前目录，不显示任何信息
+2.生成API文档
+Javacdoc [命令选项] [包名] [源文件名][@files]
+例1：java doc mypackage\*.java –d javadoc,该命令用于为mypackage包下的类生成API，输出目录为javadoc,查看该API文档的方法是双击“index.html”文件
+原文：https://blog.csdn.net/qq_36609119/article/details/78774706 
