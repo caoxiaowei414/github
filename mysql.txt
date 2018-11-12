@@ -26,3 +26,44 @@ constraint score_fk FOREIGN KEY (sid) references student(sid) on delete cascade 
 -->创建外键 名为 score_fk  参考 student表的 sid   级联限制   delete  update
 ) engine=innodb;
 
+
+自定义函数 : https://www.cnblogs.com/caoruiy/p/4485273.html
+	delimiter $$ 声明结束标识符
+	drop function if exists 'test.getdate' $$  --> 删除函数  如果存在
+	create function 'test.getdate' (gdate datetime) returns varchar (255) --> 创建一个函数  getdate, 一个参数 类型为 datetime  返回类型为 字符串类型
+	begin 开始
+	declare x varchar(255) default '' ; 声明一个变量 x 默认值为 空
+	set x = date_format(gdate,'%Y年%m月%d日%h时%i分%s秒'); -- 格式化时间  并赋值给 x
+	return x; 返回 x
+	end $$ 结束 , 记得结束标识符  
+	delimiter ;
+
+用 select 调用函数 
+
+函数中的赋值方法 :
+	set @num = 1 select @num = 1  用户变量  --> 用 select 调用
+
+	declare num int(10) default 0 存储过程变量 只在函数/存储过程范围内有效 
+
+	函数中 可以使用  
+
+	 select XXX from table where xxx into 变量名 
+	 demo :   DECLARE x int;
+			  SELECT COUNT(id) FROM tdb_name INTO x;
+			  RETURN x;
+			  END//
+
+流程控制语句 : 
+	if 判断 语法  : 
+		IF search_condition THEN statement_list 
+		[ELSEIF search_condition THEN statement_list] ... 
+		[ELSE statement_list] 
+		END IF
+
+	demo :
+
+		IF age>20 THEN SET @count1=@count1+1;  
+		ELSEIF age=20 THEN SET @count2=@count2+1;  
+		ELSE SET @count3=@count3+1;  
+		END IF;
+		
