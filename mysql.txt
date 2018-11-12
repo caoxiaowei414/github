@@ -1,2 +1,28 @@
 学习地址 :  http://blog.51cto.com/9291927/2093934
 
+唯一约束 : 
+非空约束 :
+
+constraint : 释义 --> 约束
+
+constraint pk_s_productID primary key(productID)  在建表的末尾 添加主键
+
+auto_increment primary key 自增主键
+
+unique key，唯一约束，
+
+外键 :
+ create table student
+( sid int not null primary key,
+  sname varchar(20) ) engine=innodb;
+
+
+
+reference : 释义 --> 参考文献
+create table score
+( sid int not null,
+mark INT,
+constraint score_fk FOREIGN KEY (sid) references student(sid) on delete cascade on update cascade 
+-->创建外键 名为 score_fk  参考 student表的 sid   级联限制   delete  update
+) engine=innodb;
+
