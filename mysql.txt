@@ -67,3 +67,36 @@ constraint score_fk FOREIGN KEY (sid) references student(sid) on delete cascade 
 		ELSE SET @count3=@count3+1;  
 		END IF;
 		
+
+
+
+
+传送门 :  https://www.cnblogs.com/annsshadow/p/5037667.html
+标准的 sql语句
+	select distinct
+		<select_list> 
+	from 
+		<left_table> <join_type> join
+		<right_table> on <join_condition>
+	where 
+		<where_condition>
+	group by 
+		<group_list>
+	having
+		<having_condition>
+	order by
+		<order_list>
+	limit 
+		<limiy_number>
+
+执行流程 :
+ 	from <left_table> on <join_condition>
+ 	<join_type> join <right_table>
+ 	where<where_condition>
+ 	group by <group_list>
+ 	having <having_condition>
+ 	select <select_list>
+ 	distinct 
+ 	order <order_list>
+ 	limit
+
