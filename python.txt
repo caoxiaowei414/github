@@ -232,3 +232,26 @@ python 语法 :
 
 
 
+异常处理 :
+	try :
+		可能出现异常的语句
+		raise exception 抛出异常
+	except :
+		语句出错执行的语句
+	else :
+		语句未出错执行的语句
+	finnaly :
+	    最终会执行的语句
+
+
+
+
+文件操作 :
+with .. as
+ 
+读取二进制文件 : open ('file ' , mode ='rb')
+
+seek() tell() 
+
+
+

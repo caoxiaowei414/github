@@ -1,0 +1,10 @@
+ npm install -g -verbose	
+ 	-g全局安装的modules和maven的仓库一样都在个人目录下C:\Users\ance\AppData\Roaming\npm
+ 	还有个参数可以显示安装的详细信息-verbose
+
+------------------------------------------------------------------------------------
+nvm install latest             //安装最新版的node
+nvm install 4.4.4              //安装任意版本号
+nvm list                       //查看当前已经安装的所有node版本
+nvm use 4.4.4                  //版本切换
+原文：https://blog.csdn.net/jayhkw/article/details/75259267 
