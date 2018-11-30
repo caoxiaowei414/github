@@ -1,0 +1,16 @@
+
+
+
+maven 安装 jar 包到本地 
+
+
+mvn install:install-file -DgroupId=com.alipay -DartifactId=alipay-sdk-java -Dversion=3.3.0 -Dpackaging=jar -Dfile=D:\alipay-sdk-java-3.3.0.jar -Dsources=D:\alipay-sdk-java-3.3.0-source.jar
+
+
+mvn install:install-file 
+-DgroupId=com.alipay  # 指定 groupId
+-DartifactId=alipay-sdk-java  # 指定 artifactId
+-Dversion=3.3.0  #  指定版本
+-Dpackaging=jar  # 包类型
+-Dfile=D:\alipay-sdk-java-3.3.0.jar  # jar 包位置  不写 d:\ 可以直接放在桌面 or c盘 <未经验证>
+-Dsources=D:\alipay-sdk-java-3.3.0-source.jar # 源码包 位置
