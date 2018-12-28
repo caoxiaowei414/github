@@ -220,3 +220,5 @@ pkill -9 -t 终端号  剔除用户
 				  /etc/anacrontab
 chkconfig --list | grep 查看是否安装了某服务	
 
+查看服务启动时间 ps -p PID -o lstart 
+
