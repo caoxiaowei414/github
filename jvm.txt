@@ -12,3 +12,18 @@ Jar {ctxu} {vfm0M}{jar-文件} {manifest-文件} {-C 目录}文件名
 Javacdoc [命令选项] [包名] [源文件名][@files]
 例1：java doc mypackage\*.java –d javadoc,该命令用于为mypackage包下的类生成API，输出目录为javadoc,查看该API文档的方法是双击“index.html”文件
 原文：https://blog.csdn.net/qq_36609119/article/details/78774706 
+
+
+
+
+
+
+
+
+ jvm 内存划分 (5部分) : 
+
+ 程序计数器 program counter register :
+ 虚拟机栈 vm stack:
+ 本地方法栈  native method stack:
+ 堆内存  heap:
+ 方法区 :
