@@ -26,4 +26,4 @@ Javacdoc [命令选项] [包名] [源文件名][@files]
  虚拟机栈 vm stack:
  本地方法栈  native method stack:
  堆内存  heap:
- 方法区 :
+ 方法区 method area:

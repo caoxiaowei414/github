@@ -1,0 +1,39 @@
+{{}} 插值表达式 
+v-text   输出原始值
+v-html   会将 标签 解析后输出
+v-on:click  标签绑定 点击事件  简写 @click
+箭头函数   ()=>{函数体 }
+ 
+<div v-bind:title = "title"> 鼠标移动上 会显示  简写 <div :title = "title">
+
+vue 属性绑定 :
+		v-bind: 属性 = vue 实例中  date 的名称
+双向数据绑定 :
+	v-model = ''
+
+
+new Vue ({
+	
+	el:"#",
+	data :{
+		title = ' this is e title'
+
+	} ,
+	methods :{
+		<!--  方法格式一  -->
+ 		add : function (参数) {
+
+ 		},
+ 		<!--  方法格式二 -->
+ 		del(参数) {
+
+ 		}
+
+
+	}
+
+
+
+
+
+})
