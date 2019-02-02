@@ -7,4 +7,19 @@ nvm install latest             //安装最新版的node
 nvm install 4.4.4              //安装任意版本号
 nvm list                       //查看当前已经安装的所有node版本
 nvm use 4.4.4                  //版本切换
-原文：https://blog.csdn.net/jayhkw/article/details/75259267 
+原文：https://blog.csdn.net/jayhkw/article/details/75259267
+------------------------------------------------------------------------------------
+windows 安装 nvm node版本控制  修改缓存不为c 盘
+
+https://www.cnblogs.com/yesyes/p/6156107.html
+
+
+
+
+------------------------------------------------------------------------------------ 
+npm install -g全局安装路径  https://blog.csdn.net/KeelXu/article/details/83898976
+-- 查看 
+npm config ls
+-- 修改
+1.  先在cmd中修改配置  npm config set prefix *
+2. 把环境变量改成新的路径
