@@ -1,0 +1,7 @@
+由服务端生成 token 客户端保存token  每次请求客户端携带这个token  服务端认证解析即可
+JWT生成编码后的样子 :  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiend6IiwiYWdlIjoiMTgifQ.UQmqAUhUrpDVV2ST7mZKyLTomVfg7sYkEjmdDI5XF8Q
+
+
+jwt 构成 : 头部(header) + 载荷(payload) + 签证(signature)
+
+头部 : 声明类型  和 加密方式

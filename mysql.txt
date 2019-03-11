@@ -100,3 +100,6 @@ constraint score_fk FOREIGN KEY (sid) references student(sid) on delete cascade 
  	order <order_list>
  	limit
 
+
+
+mysql 开启缓存  query_cache_type设置为DEMAND (按需开启缓存)  时只有加入SQL_CACHE的查询才会走缓存，其他查询则不会，这样可以非常自由地控制哪些查询需要被缓存
